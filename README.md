@@ -4,14 +4,15 @@ Given a React Component with required props, if you wanted to build an interface
 
 So I created this wrapper that injects the type, and any parameters as options as properties on to the type that is returned.
 
-## Example
+## Examples
 
+### `PropTypes.string`
 ```js
 const PropTypes = require('typed-prop-types')
 
-var requiredType = PropTypes.string
+var stringType = PropTypes.string
 
-console.log(requiredType)
+console.log(stringType)
 
 /*
   Outputs:
@@ -23,6 +24,28 @@ console.log(requiredType)
 ```
 
 You will see that the default `prop-types` type checker is still returned as an anonymous function, just like it always is, but I have added `type` and `required` properties.
+
+### `PropTypes.oneOf`
+
+```js
+const PropTypes = require('typed-prop-types')
+
+var colourType = PropTypes.oneOf(['apple', 'orange', 'banana'])
+
+console.log(colourType)
+
+/*
+  Outputs:
+    { [Function: bound checkType]
+      isRequired: [Function: bound checkType],
+      type: 'oneOf',
+      options: [ 'apple', 'orange', 'banana' ],
+      required: false }
+*/
+```
+
+You will see that now there is an `options` property that list required options for this prop. This is useful for populating a dropdown or a radio button list.
+
 
 ## Tests
 

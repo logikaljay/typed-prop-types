@@ -16,6 +16,7 @@ for (const key in PropTypes) {
   }
 
   PropTypes[key].type = key
+  PropTypes[key].required = false
 
   if (PropTypes[key].hasOwnProperty('isRequired')) {
     PropTypes[key].isRequired.type = key
