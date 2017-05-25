@@ -26,7 +26,7 @@ You will see that the default `prop-types` type checker is still returned as an 
 
 ## Tests
 
-```bash
+```text
 $ yarn test-cov
 yarn test-cov v0.21.3
 $ ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec
