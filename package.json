@@ -1,0 +1,17 @@
+{
+  "name": "typed-prop-types",
+  "version": "0.0.1",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "mocha",
+    "test-cov": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^3.4.1"
+  },
+  "dependencies": {
+    "code": "^4.0.0",
+    "prop-types": "^15.5.10"
+  }
+}
