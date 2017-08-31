@@ -1,6 +1,6 @@
 const PropTypes = require('prop-types')
 
-for (const key in PropTypes) {
+for (var key in PropTypes) {
   if (typeof PropTypes[key] === 'function') {
     const originalFunc = PropTypes[key]
 
@@ -12,7 +12,8 @@ for (const key in PropTypes) {
       return result
     }
 
-    PropTypes[key].isRequired = (...params) => originalFunc.call(true, ...params)
+    PropTypes[key].isRequired = (...params) =>
+      originalFunc.call(true, ...params)
   }
 
   PropTypes[key].type = key
